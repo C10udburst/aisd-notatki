@@ -57,7 +57,6 @@ Kroki 2 i 3 można połączyć w jedną pętlę -- podczas obliczania tablicy $P
 			\State $m \gets |x|$
 			\State $n \gets |y|$
 			\State $P[0] \gets 0$
-			\State $found \gets$ \textbf{false}
 			\State $half \gets \lceil m/2 \rceil$
 			\For{$i = 1$ \textbf{to} $m + n$}
 				\State $j \gets P[i-1]$
@@ -69,10 +68,10 @@ Kroki 2 i 3 można połączyć w jedną pętlę -- podczas obliczania tablicy $P
 				\EndIf
 				\State $P[i] \gets j$
 				\If{$i > m$ \textbf{and} $P[i] \geq half$}
-					\State $found \gets$ \textbf{true}
+					\State \Return \textbf{true}
 				\EndIf
 			\EndFor
-			\State \Return $found$
+			\State \Return \textbf{false}
 		\EndProcedure
 	\end{algorithmic}
 \end{algorithm}
